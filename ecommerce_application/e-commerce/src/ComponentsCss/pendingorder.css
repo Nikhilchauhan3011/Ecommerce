@@ -1,0 +1,28 @@
+.pendinordercontainer{
+
+    margin:5px;
+    width: 1300px;
+    display: flex;
+    margin-top: 20px;
+    background-color: #002333;
+}
+
+span{
+    margin: 10px;
+    color: white;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .blinking-dot {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+    margin-top: 15px;
+  }

@@ -1,0 +1,10 @@
+.profilecontainer{
+    flex: 1;
+
+    margin: 25px;
+
+}
+
+.mydiv:hover {
+    border: 2px solid #002333; /* Add your preferred highlight style */
+  }
