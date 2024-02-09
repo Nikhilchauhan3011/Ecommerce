@@ -4,17 +4,22 @@ import SideBar from './Components/SideBar';
 import Footer from './Components/Footer';
 import './App.css';
 import Product from './Components/Product';
-
+import Login from './Components/LoginPage';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    // <div className="App">
+    //   {/* <NavBar />
       
-      <SideBar />
+    //   <SideBar />
     
     
-      <Footer />
+    //   <Footer /> */}
+      
+    // </div>
+    // <Login></Login>
+    <div>
+      <Login></Login>
     </div>
   );
 }
