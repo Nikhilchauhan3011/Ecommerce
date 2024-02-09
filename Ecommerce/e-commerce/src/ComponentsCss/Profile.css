@@ -2,7 +2,16 @@
     flex: 1;
 
     margin: 25px;
+    background-color: white;
 
+}
+
+body{
+    background-color: white;
+}
+
+.mydiv{
+    color: #002333;
 }
 
 .mydiv:hover {
