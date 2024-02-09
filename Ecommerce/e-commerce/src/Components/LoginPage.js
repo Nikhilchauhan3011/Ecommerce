@@ -23,8 +23,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Logo</h1>
+    <div className='logindiv'>
+      <div style={{marginLeft:'710px'}}><br></br> <h1>Logo</h1></div>
     <div className="login-container">
       <h2 style={{color:'#002333', textDecoration:'underline'}}>Login</h2>
       <form>
