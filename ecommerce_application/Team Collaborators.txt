@@ -1,2 +1,0 @@
-Aditya,Prateek,Nikhil
-This is Demo file to test whether the git is working or not
