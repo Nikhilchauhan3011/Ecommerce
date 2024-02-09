@@ -1,0 +1,13 @@
+.sidebar{
+    width:175px;
+    background-color: #002333;
+}
+
+.maincontainer{
+    flex: 1;
+}
+
+.bigcontainer{
+    
+    display: flex;
+}
