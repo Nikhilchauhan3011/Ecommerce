@@ -12,14 +12,14 @@ function SideBar(){
                 
 
             </div>
-            <div className="maincontainer">
+            {/* <div className="maincontainer">
                 <Product />
                 <SimilarProducts/>
                 <CommentsAndReviews/>
-            </div>
-            {/* <div className="profilecontainer">
-                <Profile></Profile>
             </div> */}
+            <div className="profilecontainer">
+                <Profile></Profile>
+            </div>
             {/* <div className="pendingordercontainer">
                 <PendingOrders></PendingOrders>
                 <SimilarProducts></SimilarProducts>
