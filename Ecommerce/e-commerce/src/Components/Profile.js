@@ -80,7 +80,7 @@ function Profile(){
                     }}
                 onClick={() => handleOnClick('div2')}>
                         <br />
-                        {!expandedState.div2 &&
+                        {expandedState.div2 &&
                         (
                         <center>
                         
