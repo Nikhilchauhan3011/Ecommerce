@@ -19,7 +19,7 @@ const NavBar = () => {
                     style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc', width: '850px' }}/>
           </span>
           <span style={{ marginLeft: '10px', marginRight: '2px', marginTop:'6px' }}><img src={Search} width={35} height={35} alt="search"></img></span>
-          <span style={{ marginLeft: '110px', marginRight: '2px', marginTop:'10px' }}><img src={Wallet} width={25} height={25} alt="wallet"></img></span>
+          <span style={{ marginLeft: '90px', marginRight: '2px', marginTop:'10px' }}><img src={Wallet} width={25} height={25} alt="wallet"></img></span>
           <span style={{ marginLeft: '25px', marginRight: '20px', marginTop:'10px'  }}><img src={Cart} width={25} height={25} alt="Cart"></img></span>
           <span style={{ marginLeft: '5px', marginRight: '30px', marginTop:'10px', color:'white' }}><img src={Login} width={25} height={25} alt="Login"></img></span>
           

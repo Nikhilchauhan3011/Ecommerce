@@ -1,0 +1,21 @@
+.star-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 1.5em;
+    color: #ffd700; /* Yellow color for stars */
+    margin-right: 3px;
+  }
+  
+  .filled {
+    color: #ffd700;
+  }
+  
+  .rating {
+    font-size: 1em;
+    margin-left: 5px;
+    color: #555;
+  }
+  

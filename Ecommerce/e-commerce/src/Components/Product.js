@@ -1,7 +1,17 @@
 import Watch from '../Icons/watch.jpg';
 import '../ComponentsCss/Product.css';
+import StarRating from './starts.js';
+import { useState } from 'react';
 
 function Product() {
+
+    const [productName, setProductName] = useState('Dummy product');
+    const [productDesc, setProductDesc] = useState('This is dummy info about product');
+    const [productRating, setProductRating] = useState(3);
+
+    // setProductDesc('This dummy info');
+    
+    
     return (
         <div className="ProductContainer">
             <div id="image" style={{ width: '30%' }}>
@@ -9,13 +19,14 @@ function Product() {
             </div>
             <div id="description" style={{ marginLeft: '250px', width: '60%' }}>
                 <div>
-                    <h1>Product Description</h1>
+                    <h1 style={{color:'#002333'}} >{productName}</h1>
+                    <h3 style={{color:'#002333'}}>{productDesc}</h3>
                     <h5 style={{color:'#002333'}}>
-                        LOOK FANTASTIC & CHARMING: Fajas Colombian bodysuit shapewear is designed to specially shape the midsection with targeted firm tummy control to emphasize you're natural curves. High waist design reduces waistline creating a charming feminine silhouette. It’s designed to give you a smoother curve to help you look great in dresses!
-                        FIRM CONTROL & COMPRESSION: Fajas bodysuit trims the waist, compresses the belly, and lifts the butt, and the Outer with zipper inner with hooks designed to specifically shape the midsection with targeted double tummy control to support and compression your waist.
-                        NON-SLIP SHOULDER STRAP: These faja bodysuit Straps are fully adjustable and non-slip in design. The Open Bust design allows you to wear your favorite bra and push up your breasts, effectively immobilizing the loose fat around your armpits and back.
-                        CONVENIENT USE & SEXY DESIGN: thong style with lace
+                        
                     </h5>
+                </div>
+                <div>
+                    <StarRating rating={productRating}></StarRating>
                 </div>
                 <div className="buttonContainer">
                     <button className="customButton addToCart">Add to Cart</button>

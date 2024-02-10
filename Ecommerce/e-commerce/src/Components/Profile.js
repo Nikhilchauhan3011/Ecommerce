@@ -5,6 +5,9 @@ import profile from '../Icons/profile.jpeg';
 import box from '../Icons/box.png';
 import user from '../Icons/user.png';
 import location from '../Icons/location-pin.png';
+import NavBar from "./NavBar";
+import SideBar from "./SideBar";
+import Footer from "./Footer";
 
 
 function Profile(){
@@ -27,6 +30,10 @@ function Profile(){
       };
 
     return(
+        <div>
+            <NavBar></NavBar>
+            <div style={{display:'flex'}}>
+                <SideBar></SideBar>
         <div style={{ position: 'relative' }}>
             <div className="position-absolute" style={{ top: 0, right: 0, margin: '10px' }}>
                 <button
@@ -80,7 +87,7 @@ function Profile(){
                     }}
                 onClick={() => handleOnClick('div2')}>
                         <br />
-                        {expandedState.div2 &&
+                        {!expandedState.div2 &&
                         (
                         <center>
                         
@@ -130,6 +137,9 @@ function Profile(){
                         )
                         }
             </div>
+            </div>
+        </div>
+        <Footer></Footer>
         </div>
     );
 }
