@@ -7,6 +7,8 @@ const SimilarProducts = () => {
     { id: 2, image: 'image2.jpg', description: 'Product 2 Description' },
     { id: 3, image: 'image3.jpg', description: 'Product 3 Description' },
     { id: 4, image: 'image4.jpg', description: 'Product 4 Description' },
+    { id: 5, image: 'image5.jpg', description: 'Product 4 Description' },
+
     // Add more products as needed
   ];
 

@@ -1,0 +1,34 @@
+.categories{
+    height: 15vw;
+    padding: 8px;
+    width: fit-content;
+    
+}
+
+.media-element{
+    width: fit-content;
+    margin:5px;
+    background-color: #002333;
+    border-radius: 10px;
+}
+
+.categories-text{
+    text-align: center;
+    color: aliceblue;
+}
+
+.media-scroller{
+   
+    /* margin: 1px;
+    padding: 3px;
+    border: 2px dotted; */
+    width: 85vw;
+    gap:var(--size-3);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 27%;
+    overflow-x: scroll;
+
+    overscroll-behavior-inline: contain;
+    
+}

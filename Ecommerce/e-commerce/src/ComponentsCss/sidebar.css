@@ -1,14 +1,16 @@
 .sidebar{
-    width:175px;
+    
+    width:15vw;
     background-color: #002333;
 }
 
 .maincontainer{
-    flex: 1;
+    flex: auto;
 }
 
 .bigcontainer{
     display: flex;
+    
 }
 
 .pendingordercontainer{

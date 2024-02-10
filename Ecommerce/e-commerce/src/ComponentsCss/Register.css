@@ -1,0 +1,33 @@
+.form-row{
+    display: flex !important;
+}
+
+.form-group{
+    margin:2px;
+    padding: 5px;
+}
+
+.container{
+    height: fit-content;
+    background-color: #DEEFE7;
+}
+
+.btn-primary {
+    display: block; 
+    margin: 0 auto; 
+  }
+
+.loginbtn{
+    text-align: center;
+    margin: 0 auto;
+}  
+
+
+
+.bodyclass{
+   display: grid;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: #002333;
+    
+}

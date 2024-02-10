@@ -4,10 +4,10 @@ import '../ComponentsCss/Product.css';
 function Product() {
     return (
         <div className="ProductContainer">
-            <span id="image" style={{ width: '30%' }}>
+            <div id="image" style={{ width: '30%' }}>
                 <img src={Watch} style={{ width: '550px', height: '550px' }} alt="Watch" />
-            </span>
-            <span id="description" style={{ marginLeft: '250px', width: '60%' }}>
+            </div>
+            <div id="description" style={{ marginLeft: '250px', width: '60%' }}>
                 <div>
                     <h1>Product Description</h1>
                     <h5 style={{color:'#002333'}}>
@@ -21,7 +21,7 @@ function Product() {
                     <button className="customButton addToCart">Add to Cart</button>
                     <button className="customButton buyNow">Buy Now</button>
                 </div>
-            </span>
+            </div>
         </div>
     )
 }
