@@ -13,11 +13,11 @@ const SimilarProducts = () => {
   ];
 
   return (
-    <>
+    <div>
     <h3 style={{marginTop:'100px', marginLeft:'25px'}}>
         Similar Products
     </h3>
-    <div style={{marginTop : '50px',display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+    <div style={{marginTop : '50px',display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between',width:'85vw' }}>
       {products.map((product) => (
         <div key={product.id} style={{ width: '23%', marginBottom: '20px', textAlign: 'center' }}>
           <img src={product.image} alt={`Product ${product.id}`} style={{ width: '100%', borderRadius: '8px' }} />
@@ -25,7 +25,7 @@ const SimilarProducts = () => {
         </div>
       ))}
     </div>
-    </>
+    </div>
   );
 };
 

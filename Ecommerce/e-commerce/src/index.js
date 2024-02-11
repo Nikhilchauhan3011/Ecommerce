@@ -4,11 +4,6 @@ import './index.css';
 import App from './App';
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d6de115c8f3fa2a73b26bf71cecf54786e0ef3e4
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

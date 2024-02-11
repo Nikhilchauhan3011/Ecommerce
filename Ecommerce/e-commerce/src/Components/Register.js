@@ -8,14 +8,14 @@ function Register(){
 
   let [isChecked,setChecked] = useState(false);
 
-  let [height,setHeight] = useState('100vh');
+  let [height,setHeight] = useState('110vh');
 
   let [additionalFields, setAdditionalFields] = useState([]);
 
   const handleCheckboxChange = () => {
     setChecked(!isChecked);
     if (!isChecked) {
-      setHeight('120vh');
+      setHeight('170vh');
       setAdditionalFields([
         <>
 
@@ -75,7 +75,7 @@ function Register(){
       ]);
     } else {
       setAdditionalFields([]);
-      setHeight('100vh');
+      setHeight('110vh');
     }
   };
 

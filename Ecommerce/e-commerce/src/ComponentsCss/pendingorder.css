@@ -26,3 +26,33 @@ span{
     animation: blink 1s infinite;
     margin-top: 15px;
   }
+
+  .buttonContainer{
+    margin-top: 45px;
+}
+
+.customButton {
+    color: #159a9c;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.customButton:hover {
+    background-color: #002333;
+    color: white;
+}
+
+.addToCart {
+    background-color: transparent;
+    border: 2px solid #002333;
+}
+
+.buyNow {
+    background-color: #deefe7;
+    border: 2px solid #002333;
+}
