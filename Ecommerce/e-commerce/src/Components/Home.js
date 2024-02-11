@@ -1,18 +1,5 @@
-import NavBar from "./NavBar";
-<<<<<<< HEAD
-import SideBar from "./SideBar";
-import Footer from "./Footer";
-function Home(){
-    return (
-        <>
-        <NavBar />
-        <SideBar />
-        <Footer />
-        </>
+import NavBar from "./NavBar"
 
-    );
-}
-=======
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 
@@ -22,6 +9,7 @@ import SimilarProducts from "./SimilarProduct";
 import Profile from "./Profile";
 import PendingOrders from "./PendingOrders";
 import CommentsAndReviews from "./CommentsAndReviews";
+import Success from "./SuccessBuy";
 function Home(){
     const location = useLocation();
 
@@ -33,7 +21,7 @@ function Home(){
             <div style={{display:'flex'}}>
             <SideBar></SideBar>
             {path === '/Home/Product' && (
-                <div>
+                <div style={{width:'85vw'}}>
                     <Product></Product>
                     <SimilarProducts></SimilarProducts>
                     <CommentsAndReviews></CommentsAndReviews>
@@ -46,11 +34,16 @@ function Home(){
             </div>
             )}
             {path === '/Home/Profile' && (
-                    <div>
+                    // <div style={{width:'700px'}}>
+                    //     <Profile></Profile>
+                    // </div>
                     <Profile></Profile>
-                    </div>
+            )}
+            {path === '/Home/Success' &&(
+                <Success></Success>
             )}
             </div>
+
             <Footer></Footer>
             
         </div>
@@ -58,5 +51,5 @@ function Home(){
 }
 
 
->>>>>>> d6de115c8f3fa2a73b26bf71cecf54786e0ef3e4
+
 export default Home;

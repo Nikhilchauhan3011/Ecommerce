@@ -26,6 +26,7 @@
 
 .bodyclass{
    display: grid;
+   
     width: 100vw;
     box-sizing: border-box;
     background-color: #002333;

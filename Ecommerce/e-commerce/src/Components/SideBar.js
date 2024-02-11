@@ -9,21 +9,13 @@ import Categories from "./Categories";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 function SideBar(){
-<<<<<<< HEAD
-    return (
-        <>
+        const [Trending ,SetTrending] = useState(false);
+        const [backGroundColor, setBg]= useState(false);
+        function handleMouseOver(){
+            SetTrending(true);
+            setBg(true);
+        }
 
-        <div className="bigcontainer">
-            <div className="sidebar">
-                
-=======
-    const [Trending ,SetTrending] = useState(false);
-    const [backGroundColor, setBg]= useState(false);
-    function handleMouseOver(){
-        SetTrending(true);
-        setBg(true);
-    }
->>>>>>> d6de115c8f3fa2a73b26bf71cecf54786e0ef3e4
 
     function handleMouseLeave(){
         SetTrending(false);
@@ -33,29 +25,43 @@ function SideBar(){
 
     
     return (
-        // <div className="bigcontainer">
+        <div className="bigcontainer">
             <div className="sidebar">
                 <div style={{marginTop:'20px', marginLeft:'8px'}}>
-                <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-                    {!backGroundColor && (
-                    <div>
-                        <h6 className="myH6">Trending products</h6>
-                    </div>
-                    )}
-                    {backGroundColor && (
-                    <div style={{backGroundColor:'#deefe7'}}>
-                        <h6 className="myH6">Trending products</h6>
-                    </div>
-                    )}
-                    {Trending && (  
-                                    <div style={{marginLeft : '10px', width:'100px', transition : '0.5s'}}>
-                                        <a href="" ><h6>- Men</h6></a>
-                                        <a href="" ><h6>- Women</h6></a>
-                                        <a href="" ><h6>- Kids</h6></a>
-                                        <a href="" ><h6>- Adult</h6></a>
-                                    </div>
-                                )} 
-                </div>
+                <div
+                        onMouseOver={handleMouseOver}
+                        onMouseLeave={handleMouseLeave}
+                        style={{
+                            transition: 'height 0.5s ease-in-out', // Add the transition property
+                        }}
+                        >
+                        {!backGroundColor && (
+                            <div>
+                            <h6 className="myH6">Trending products</h6>
+                            </div>
+                        )}
+                        {backGroundColor && (
+                            <div style={{ backgroundColor: '#deefe7' }}>
+                            <h6 className="myH6">Trending products</h6>
+                            </div>
+                        )}
+                        {Trending && (
+                            <div style={{ marginLeft: '10px', width: '100px', height: 'auto' }}>
+                            <a href="">
+                                <h6>- Men</h6>
+                            </a>
+                            <a href="">
+                                <h6>- Women</h6>
+                            </a>
+                            <a href="">
+                                <h6>- Kids</h6>
+                            </a>
+                            <a href="">
+                                <h6>- Adult</h6>
+                            </a>
+        </div>
+      )}
+    </div>
                 <hr></hr>
                 <div>
                     <a href="_______">
@@ -76,26 +82,9 @@ function SideBar(){
                 </div>
                 <hr></hr>
                 </div>
-            </div>
-<<<<<<< HEAD
-            <div className="maincontainer">
-                
-                <Categories />
-                <SimilarProducts/>
-                <CommentsAndReviews/>
-                
-            </div>
-            {/* <div className="profilecontainer">
-                <Profile></Profile>
-            </div> */}
-            {/* <div className="pendingordercontainer">
-                <PendingOrders></PendingOrders>
-                <SimilarProducts></SimilarProducts>
-            </div> */}
+            </div>           
        </div>   
-       </> 
-=======
->>>>>>> d6de115c8f3fa2a73b26bf71cecf54786e0ef3e4
+
         
     );
 }

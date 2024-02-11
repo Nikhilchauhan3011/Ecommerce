@@ -1,6 +1,6 @@
 .categories{
     height: 15vw;
-    padding: 8px;
+    /* padding: 8px; */
     width: fit-content;
     
 }
@@ -22,8 +22,8 @@
     /* margin: 1px;
     padding: 3px;
     border: 2px dotted; */
-    width: 85vw;
-    gap:var(--size-3);
+    /* width: 85vw; */
+    /* gap:var(--size-3); */
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 27%;
