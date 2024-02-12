@@ -4,6 +4,11 @@ import Cart from '../Icons/cart.png';
 import Login from '../Icons/login.png';
 import Search from '../Icons/search.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useLocation} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+
+
 const NavBar = () => {
 
   const handleKeyPress = (event) =>{
@@ -11,6 +16,26 @@ const NavBar = () => {
       console.log(event.target.value);
     }
   }
+
+    const location = useLocation();
+    const paths = location.pathname;
+    const navigate = useNavigate();
+
+
+    function handleLogin(){
+      console.log(paths);
+      navigate('/',{state : {paths}});
+    }
+
+    function handleCart(){
+      navigate('/Home/Cart',{state : {data : paths}});
+    }
+
+    function handleWallet(){
+      navigate('/Home/Wallet',{state : {data : paths}});
+    }
+
+
 
   return (
     <div >
@@ -30,9 +55,24 @@ const NavBar = () => {
           <button type="button" className="btn btn-success d-flex align-items-center justify-content-center" style={{width:'80px', height:'35px', marginTop:'10px'}}>
                 Search
           </button>          
-          <span style={{ marginLeft: '90px', marginRight: '2px', marginTop:'10px' }}><img src={Wallet} style={{width:'25px', height:'25px'}} alt="wallet"></img></span>
-          <span style={{ marginLeft: '25px', marginRight: '20px', marginTop:'10px'  }}><img src={Cart} style={{width:'25px', height:'25px'}} alt="Cart"></img></span>
-          <span style={{ marginLeft: '5px', marginRight: '20px', marginTop:'10px', color:'white' }}><img src={Login} style={{width:'25px', height:'25px'}} alt="Login"></img></span>
+          <span style={{ marginLeft: '70px', marginRight: '2px', marginTop:'-15px' }}>
+            <imput type='button' onClick={handleWallet}>
+              <img src={Wallet} style={{width:'25px', height:'25px',marginLeft:'9px'}} alt="wallet"></img>
+              <h6>Wallet</h6>
+            </imput>
+          </span>
+          <span style={{ marginLeft: '25px', marginRight: '20px', marginTop:'-15px'  }}>
+            <imput type='button' onClick={handleCart}>
+              <img src={Cart} style={{width:'25px', height:'25px',marginLeft:'3px'}} alt="Cart"></img>
+              <h6>Cart</h6>
+            </imput>
+          </span>
+          <span  style={{ marginLeft: '5px', marginRight: '20px', marginTop:'-15px', color:'white' }}>
+            <imput type='button' onClick={handleLogin}>
+              <img src={Login} style={{width:'25px', height:'25px',marginLeft:'7px'}} alt="Login"></img>
+              <h6>Login</h6>
+            </imput>
+          </span>
           
           
         </nav>
