@@ -4,7 +4,7 @@ import StarRating from './starts.js';
 import { useState } from 'react';
 import WhiteHeart from './Heart.js';
 import CopyToClipboardButton from './CopyToClipBoard.js';
-import Cart from "../Components/Cart.js"
+import Cart from "../Customer_Components/Cart.js"
 
 function Product() {
 

@@ -1,0 +1,43 @@
+h2{
+    margin-left: 80px;
+    color: white;
+    margin-top: 30px;
+
+}
+
+hr{
+    margin-left: 30px;
+    width: 235px;
+}
+
+h5{
+    margin-left: 40px;
+}
+
+
+.customButton {
+    color: #159a9c;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-left: 80px;
+}
+
+.customButton:hover {
+    background-color: #002333;
+    color: white;
+}
+
+.addToCart {
+    background-color: transparent;
+    border: 2px solid #002333;
+}
+
+.buyNow {
+    background-color: #deefe7;
+    border: 2px solid #002333;
+}
