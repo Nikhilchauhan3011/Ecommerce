@@ -1,5 +1,5 @@
 import VNavBar from "../VendorComponents/VendorNavBar"
-import Footer from "../Components/Footer"
+import Footer from "../Customer_Components/Footer"
 import { VendorSidebar } from "./vendorSidebar"
 import "../VendorComponentCss/VHome.css";
 import Fashion from "../Icons/kidsClothes.jpg"

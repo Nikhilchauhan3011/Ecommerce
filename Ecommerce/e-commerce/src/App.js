@@ -1,22 +1,24 @@
 import React from 'react';
-import NavBar from './Components/NavBar';
-import SideBar from './Components/SideBar';
-import Footer from './Components/Footer';
+import NavBar from './Customer_Components/NavBar';
+import SideBar from './Customer_Components/SideBar';
+import Footer from './Customer_Components/Footer';
 import './App.css';
-import Product from './Components/Product';
+import Product from './Customer_Components/Product';
 
-import Profile from './Components/Profile';
-import Register from './Components/Register';
-import L from './Components/Login';
-import Home from './Components/Home';
-import Cart from './Components/Cart';
+import Profile from './Customer_Components/Profile';
+import Register from './Customer_Components/Register';
+import L from './Customer_Components/Login';
+import Home from './Customer_Components/Home';
+import Cart from './Customer_Components/Cart';
 
 
 
 import {BrowserRouter as Router, Routes , Route} from 'react-router-dom';
-import HomePage from './Components/HomePage';
+
+import HomePage from './Customer_Components/HomePage';
 import { VendorHome } from './VendorComponents/VendorHome';
 import { AddProduct } from './VendorComponents/AddProduct';
+
 // import Home from './Components/Home';
  
 function App() {
