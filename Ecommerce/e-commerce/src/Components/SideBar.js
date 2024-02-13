@@ -41,7 +41,7 @@ function SideBar(){
                             </div>
                         )}
                         {backGroundColor && (
-                            <div style={{ backgroundColor: '#deefe7' }}>
+                            <div>
                             <h6 className="myH6">Trending products</h6>
                             </div>
                         )}
@@ -76,7 +76,7 @@ function SideBar(){
                 </div>
                 <hr></hr>
                 <div>
-                    <a href="_______">
+                    <a href="/Home/Exclusive">
                         <h6>Join Exclusive !</h6>
                     </a>
                 </div>

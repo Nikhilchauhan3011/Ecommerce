@@ -27,6 +27,7 @@ function App() {
                 <Route path='/Home/Pending' element={<Home></Home>}/>
                 <Route path='/Home' element={<HomePage></HomePage>}/>
                 <Route path='/Home/Success' element={<Home></Home>}/>
+                <Route path='/Home/Exclusive' element={<Home></Home>}/>
                 <Route path='/SignUp' element={<Register></Register>}/>
                 <Route path='/Home/Cart' element={<Home></Home>}/>
                 <Route/>

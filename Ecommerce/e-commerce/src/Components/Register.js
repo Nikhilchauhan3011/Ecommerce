@@ -166,7 +166,7 @@ function Register(){
 
 
 <button type="submit" className="btn btn-primary">Sign Up</button>
-<p className='loginbtn'>Already Have an Account?  <Link to="/profile">Login</Link> </p> 
+<p className='loginbtn'>Already Have an Account?  <Link to="/">Login</Link> </p> 
 
      
     

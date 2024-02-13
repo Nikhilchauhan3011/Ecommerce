@@ -24,7 +24,7 @@ function Product() {
    
 
     return (
-        <div className="ProductContainer">
+        <div style={{display:'flex'}}>
             <div id="image" style={{ width: '30%', marginLeft:'25px' }}>
                 <img src={Watch} style={{ width: '550px', height: '550px' }} alt="Watch" />
             </div>
@@ -36,7 +36,7 @@ function Product() {
                 <CopyToClipboardButton></CopyToClipboardButton>
             </div>
             </div>
-            <div id="description" style={{ marginLeft: '110px', marginTop:'15px'}}>
+            <div id="description" style={{ marginLeft: '80px', marginTop:'15px'}}>
                 <div>
                     <h1 style={{color:'#002333'}} >{productName}</h1>
                     <h3 style={{color:'#002333'}}>{productDesc}</h3>

@@ -4,6 +4,9 @@ import axios from 'axios';
 import shoppingImag from '../Icons/shopping2.jpeg';
 import { useLocation} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import instagram from   '../Icons/instagram.png';
+import facebook from   '../Icons/facebook.png';
+import gmail from   '../Icons/gmail.png';
 
 function L(props){
     const [username, setUsername] = useState('');
@@ -12,7 +15,7 @@ function L(props){
     const [error, setError] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
-    const [path,setPath] =  useState(location.state.paths);
+    const [path,setPath] =  useState(location.state?.paths || '/Home');
 
     useEffect(() =>{
         function print(){
@@ -22,7 +25,6 @@ function L(props){
     },[]);
 
     const handleLogin = () => {
-        console.log("Aditya " + path);
         // Simple form validation
         if (!username || !password || !loginAs) {
         setError('Please enter both username, password, and select a login type.');
@@ -35,7 +37,11 @@ function L(props){
 
         // Reset error on successful login
         setError('');
-        navigate(path);
+        console.log(loginAs);
+        if(loginAs=='customer'){
+            navigate(path);
+        }
+        
 
     };
 
@@ -110,6 +116,11 @@ function L(props){
                     <p className="sign-up-link">
                     Don't have an account? <a href="/signup">Sign Up</a>
                     </p>
+                    <div style={{marginTop:'80px',display:'flex'}}>
+                        <img src={facebook} style={{width:'25px', height:'25px', marginLeft:'250px'}}></img>
+                        <img src={instagram} style={{width:'25px', height:'25px',marginLeft:'20px'}}></img>
+                        <img src={gmail} style={{width:'25px', height:'25px', marginLeft:'20px'}}></img>
+                    </div>
                 </form>
                 </div>
             </div>
