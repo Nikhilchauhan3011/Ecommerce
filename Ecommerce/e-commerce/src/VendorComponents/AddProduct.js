@@ -3,8 +3,9 @@ import { VendorSidebar } from './vendorSidebar'
 import Footer from '../Components/Footer'
 import '../VendorComponentCss/AddProduct.css'
 import React,{ useState } from 'react'
+import Categories from '../Components/Categories'
 export const AddProduct=()=>{
-
+    const [selectedCategory,setSelectedCategory]=useState("");
     const [quantity,setQuantity] = useState("1");
     const [pricePerProduct,setPricePerProduct] = useState("0");
     const totalPrice = Number(quantity)*Number(pricePerProduct);
@@ -20,6 +21,18 @@ export const AddProduct=()=>{
         console.log('Selected Images:', imageFiles);
       };
 
+      const handleCategory=(e)=>{
+        setSelectedCategory(e.target.value);
+      }
+
+      const CategoriesList = [
+        {id:1,name:"Clothes",value:"clothes"},
+        {id:2,name:"Shoes",value:"shoes"},
+        {id:3,name:"Electronics",value:"electronics"},
+        {id:4,name:"Toys",value:"toys"},
+        {id:5,name:"Beauty Accessories",value:"beauty_accessories"}
+      ]
+
     return (
         <div className="fullContainer">
             <VendorNavBar/>
@@ -31,7 +44,7 @@ export const AddProduct=()=>{
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label for="productName">Product Name</label>
-                            <input type="text" className="form-control" id="productName" placeholder="Puma" />
+                            <input type="text" className="form-control" id="productName" placeholder="Jeans" />
                         </div>
 
                         <div className="form-group col-md-6">
@@ -39,6 +52,16 @@ export const AddProduct=()=>{
                             <input type="text" className="form-control" id="brandName" placeholder="flying machine" />
                         </div>
 
+                        </div>
+                        
+                        <div className='form-row'>
+                        <div className="form-group col-md-4">
+                            <label for="brandName">Category</label>
+                            <select value={selectedCategory} onChange={handleCategory}>
+                                <option value="">--Select--</option>
+                                {CategoriesList.map(category=><option key={category.id} value={category.value}>{category.name}</option>)}
+                            </select>
+                        </div>
                         </div>
 
                         <div className="form-row">

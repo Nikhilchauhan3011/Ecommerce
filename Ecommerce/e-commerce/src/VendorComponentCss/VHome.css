@@ -23,7 +23,11 @@
     color: aliceblue;
 }
 
-main {
-    height: 600px; /* 100% viewport height - height of header - height of footer */
-    overflow-y: scroll; /* Allow vertical scrolling */
+.main {
+    height: 100vh; /* 100% viewport height - height of header - height of footer */
+    overflow-y: scroll;
+    /* display:grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 31%;
+    overscroll-behavior-inline: contain; */
   }

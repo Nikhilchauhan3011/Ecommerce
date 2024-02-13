@@ -10,7 +10,6 @@ const NavBar = () => {
           <span style={{ marginLeft: '20px', color: '#fff' , marginTop : '7px' ,fontSize:'20px'}}>Profile</span>
           
           <span style={{ marginLeft: '400px', marginRight: '2px', marginTop:'10px' }}><h5>Hello, vendor</h5></span> 
-  
         </nav>
       </div>
     </div>
