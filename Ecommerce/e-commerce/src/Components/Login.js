@@ -12,7 +12,7 @@ function L(props){
     const [error, setError] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
-    const [path,setPath] =  useState(location.state.paths);
+    const [path,setPath] =  useState(location.state?.paths || '/');
 
     useEffect(() =>{
         function print(){
