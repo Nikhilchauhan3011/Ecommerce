@@ -1,0 +1,28 @@
+.media-form{
+    background-color: #002333;
+    height: 800px;
+    width: 1175px;
+}
+.form-row{
+    display: flex !important;
+}
+label{
+    color: aliceblue;
+    margin-left: 5px;
+}
+textarea{
+    margin-left: 5px;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+.form-group{
+    margin:0px;
+    padding: 5px;
+}
+.addProduct{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   margin-left: 15px;
+   width: 0px;
+   margin-bottom: 15px;
+}

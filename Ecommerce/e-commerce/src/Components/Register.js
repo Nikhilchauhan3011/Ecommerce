@@ -29,7 +29,7 @@ function Register(){
         <label for="inputShopName">Adhar Number</label>
         <input type="number" className="form-control" id="inputAdharNumber" placeholder="1234 2345 3456" />
       </div>
-
+      
       </div>
 
       <div className="form-row">
