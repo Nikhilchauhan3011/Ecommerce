@@ -5,7 +5,7 @@ import SimilarProducts from "./SimilarProduct";
 import CommentsAndReviews from "./CommentsAndReviews";
 import Profile from "./Profile";
 import PendingOrders from "./PendingOrders";
-import Categories from "./Categories";
+import Categories from "./Offers";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 function SideBar(){

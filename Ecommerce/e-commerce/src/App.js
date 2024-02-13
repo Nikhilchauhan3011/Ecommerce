@@ -9,6 +9,7 @@ import Profile from './Components/Profile';
 import Register from './Components/Register';
 import L from './Components/Login';
 import Home from './Components/Home';
+import Cart from './Components/Cart';
 
 
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path='/Home/Success' element={<Home></Home>}/>
                 <Route path='/Home/Exclusive' element={<Home></Home>}/>
                 <Route path='/SignUp' element={<Register></Register>}/>
+                <Route path='/Home/Cart' element={<Home></Home>}/>
                 <Route/>
             </Routes>
         </Router>

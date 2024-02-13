@@ -11,6 +11,9 @@ import PendingOrders from "./PendingOrders";
 import CommentsAndReviews from "./CommentsAndReviews";
 import Success from "./SuccessBuy";
 import JoinEx from "./JoinExclusive";
+
+import Cart from "./Cart";
+
 function Home(){
     const location = useLocation();
 
@@ -45,6 +48,7 @@ function Home(){
             {path === '/Home/Success' &&(
                 <Success></Success>
             )}
+
             {path === '/Home/Exclusive' && (
                     // <div style={{width:'700px'}}>
                     //     <Profile></Profile>
@@ -54,6 +58,13 @@ function Home(){
                         <SimilarProducts></SimilarProducts>
                     </div>
             )}
+
+            
+            {path === '/Home/Cart' &&(
+                <Cart></Cart>
+            )}
+
+
             </div>
 
             <Footer></Footer>
