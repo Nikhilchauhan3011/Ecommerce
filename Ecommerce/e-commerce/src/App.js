@@ -15,6 +15,8 @@ import Cart from './Components/Cart';
 
 import {BrowserRouter as Router, Routes , Route} from 'react-router-dom';
 import HomePage from './Components/HomePage';
+import { VendorHome } from './VendorComponents/VendorHome';
+import { AddProduct } from './VendorComponents/AddProduct';
 // import Home from './Components/Home';
  
 function App() {
@@ -29,7 +31,12 @@ function App() {
                 <Route path='/Home/Success' element={<Home></Home>}/>
                 <Route path='/Home/Exclusive' element={<Home></Home>}/>
                 <Route path='/SignUp' element={<Register></Register>}/>
+
+                <Route path='/VendorHome' element={<VendorHome/>}/>
+                <Route path='/VendorHome/AddProducts' element={<AddProduct/>}/>
+
                 <Route path='/Home/Cart' element={<Home></Home>}/>
+
                 <Route/>
             </Routes>
         </Router>
