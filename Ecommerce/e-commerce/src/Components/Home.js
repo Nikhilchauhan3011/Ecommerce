@@ -10,12 +10,18 @@ import Profile from "./Profile";
 import PendingOrders from "./PendingOrders";
 import CommentsAndReviews from "./CommentsAndReviews";
 import Success from "./SuccessBuy";
+import JoinEx from "./JoinExclusive";
+
+import Cart from "./Cart";
+
 function Home(){
     const location = useLocation();
 
     const path = location.pathname;
 
+
     return(
+
         <div>
             <NavBar></NavBar>
             <div style={{display:'flex'}}>
@@ -33,7 +39,7 @@ function Home(){
                     <SimilarProducts></SimilarProducts>
             </div>
             )}
-            {path === '/Home/Profile' && (
+            {path === 'Home/Profile' && (
                     // <div style={{width:'700px'}}>
                     //     <Profile></Profile>
                     // </div>
@@ -42,6 +48,23 @@ function Home(){
             {path === '/Home/Success' &&(
                 <Success></Success>
             )}
+
+            {path === '/Home/Exclusive' && (
+                    // <div style={{width:'700px'}}>
+                    //     <Profile></Profile>
+                    // </div>
+                    <div>
+                        <JoinEx></JoinEx>
+                        <SimilarProducts></SimilarProducts>
+                    </div>
+            )}
+
+            
+            {path === '/Home/Cart' &&(
+                <Cart></Cart>
+            )}
+
+
             </div>
 
             <Footer></Footer>

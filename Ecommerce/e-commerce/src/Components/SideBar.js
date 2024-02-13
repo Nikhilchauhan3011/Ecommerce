@@ -5,7 +5,7 @@ import SimilarProducts from "./SimilarProduct";
 import CommentsAndReviews from "./CommentsAndReviews";
 import Profile from "./Profile";
 import PendingOrders from "./PendingOrders";
-import Categories from "./Categories";
+import Categories from "./Offers";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 function SideBar(){
@@ -41,7 +41,7 @@ function SideBar(){
                             </div>
                         )}
                         {backGroundColor && (
-                            <div style={{ backgroundColor: '#deefe7' }}>
+                            <div>
                             <h6 className="myH6">Trending products</h6>
                             </div>
                         )}
@@ -76,7 +76,7 @@ function SideBar(){
                 </div>
                 <hr></hr>
                 <div>
-                    <a href="_______">
+                    <a href="/Home/Exclusive">
                         <h6>Join Exclusive !</h6>
                     </a>
                 </div>

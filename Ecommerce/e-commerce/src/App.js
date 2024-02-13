@@ -9,6 +9,7 @@ import Profile from './Components/Profile';
 import Register from './Components/Register';
 import L from './Components/Login';
 import Home from './Components/Home';
+import Cart from './Components/Cart';
 
 
 
@@ -28,9 +29,14 @@ function App() {
                 <Route path='/Home/Pending' element={<Home></Home>}/>
                 <Route path='/Home' element={<HomePage></HomePage>}/>
                 <Route path='/Home/Success' element={<Home></Home>}/>
+                <Route path='/Home/Exclusive' element={<Home></Home>}/>
                 <Route path='/SignUp' element={<Register></Register>}/>
+
                 <Route path='/VendorHome' element={<VendorHome/>}/>
                 <Route path='/VendorHome/AddProducts' element={<AddProduct/>}/>
+
+                <Route path='/Home/Cart' element={<Home></Home>}/>
+
                 <Route/>
             </Routes>
         </Router>
