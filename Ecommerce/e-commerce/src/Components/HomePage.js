@@ -2,7 +2,7 @@
 import SideBar from "./SideBar";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-import Categories from "./Categories";
+import Offers from "./Offers";
 import SimilarProducts from "./SimilarProduct";
 
 function HomePage(){
@@ -12,7 +12,7 @@ function HomePage(){
         <div style={{display:'flex'}}>
         <SideBar />
         <div style={{width:'84vw'}}>
-        <Categories></Categories>
+        <Offers ></Offers>
         <SimilarProducts></SimilarProducts>
         </div>
         </div>

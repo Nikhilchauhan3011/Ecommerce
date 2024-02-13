@@ -28,7 +28,6 @@
     grid-auto-flow: column;
     grid-auto-columns: 27%;
     overflow-x: scroll;
-
     overscroll-behavior-inline: contain;
     
 }

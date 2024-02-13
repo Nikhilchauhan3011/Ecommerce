@@ -10,6 +10,8 @@ import Profile from "./Profile";
 import PendingOrders from "./PendingOrders";
 import CommentsAndReviews from "./CommentsAndReviews";
 import Success from "./SuccessBuy";
+import Cart from "./Cart";
+
 function Home(){
     const location = useLocation();
 
@@ -42,6 +44,11 @@ function Home(){
             {path === '/Home/Success' &&(
                 <Success></Success>
             )}
+            
+            {path === '/Home/Cart' &&(
+                <Cart></Cart>
+            )}
+
             </div>
 
             <Footer></Footer>
