@@ -2,25 +2,41 @@ import '../ComponentsCss/LoginMain.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import shoppingImag from '../Icons/shopping2.jpeg';
+import { useLocation} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function L(){
+function L(props){
     const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [loginAs, setLoginAs] = useState('customer'); // Default value is 'customer'
-  const [error, setError] = useState('');
+    const [password, setPassword] = useState('');
+    const [loginAs, setLoginAs] = useState('customer'); // Default value is 'customer'
+    const [error, setError] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [path,setPath] =  useState(location.state.paths);
 
-  const handleLogin = () => {
-    // Simple form validation
-    if (!username || !password || !loginAs) {
-      setError('Please enter both username, password, and select a login type.');
-      return;
-    }
+    useEffect(() =>{
+        function print(){
+            console.log("Aditya " + path +" s");
+        }
+        print();
+    },[]);
 
-    // Your more advanced login logic here
-    console.log('Logging in:', username, password, 'as', loginAs);
+    const handleLogin = () => {
+        console.log("Aditya " + path);
+        // Simple form validation
+        if (!username || !password || !loginAs) {
+        setError('Please enter both username, password, and select a login type.');
+        return;
 
-    // Reset error on successful login
-    setError('');
+        }
+
+        // Your more advanced login logic here
+        console.log('Logging in:', username, password, 'as', loginAs);
+
+        // Reset error on successful login
+        setError('');
+        navigate(path);
+
     };
 
     const [imgUrl, setImgUrl] = useState('https://random.imagecdn.app/550/550');
