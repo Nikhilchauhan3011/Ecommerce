@@ -1,0 +1,12 @@
+.Vsidebar{
+    margin-left: 1200px;
+    width: 400px;
+    background-color: #002333;
+}
+
+.sidebarContent{
+    color: aliceblue;
+    padding: auto;
+    margin-top: 10%;
+    margin-left: 20%;
+}

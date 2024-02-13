@@ -1,0 +1,33 @@
+.vendorHome{
+    display: grid;
+     grid-template-columns: repeat(3, 1fr);
+    margin-left: 50px;
+    width: 0px;
+    
+}
+
+.media-element{
+    /* width: 80%; */
+    height: 300px;
+    width: 350px;
+    margin:5px;
+    background-color: #002333;
+    border-radius: 10px;
+    /* img{
+        width: 300px;
+    } */
+}
+
+.categories-text{
+    text-align: center;
+    color: aliceblue;
+}
+
+.main {
+    height: 100vh; /* 100% viewport height - height of header - height of footer */
+    overflow-y: scroll;
+    /* display:grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 31%;
+    overscroll-behavior-inline: contain; */
+  }
