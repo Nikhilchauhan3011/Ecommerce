@@ -3,6 +3,8 @@ import { VendorSidebar } from './vendorSidebar'
 import Footer from '../Customer_Components/Footer.js'
 import '../VendorComponentCss/AddProduct.css'
 import React,{ useState } from 'react'
+
+
 export const AddProduct=()=>{
     const [selectedCategory,setSelectedCategory]=useState("");
     const [quantity,setQuantity] = useState("1");

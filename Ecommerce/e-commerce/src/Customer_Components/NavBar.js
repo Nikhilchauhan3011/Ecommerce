@@ -28,7 +28,7 @@ const NavBar = () => {
     }
 
     function handleCart(){
-      navigate('/Home/Cart',{state : {data : paths}});
+      navigate('/Customer/Cart',{state : {data : paths}});
     }
 
     function handleWallet(){

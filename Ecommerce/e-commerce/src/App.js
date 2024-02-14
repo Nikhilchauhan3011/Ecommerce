@@ -27,17 +27,19 @@ function App() {
         <Router>
             <Routes>
                 <Route path='/Login' element={<L></L>}/>
-                <Route path='/Home/Product' element={<Home></Home>}/>
-                <Route path='/Home/Pending' element={<Home></Home>}/>
+                {/* <Route path='/' element={<Home></Home>}/> */}
+                <Route path='/Customer/Product' element={<Home></Home>}/>
+                <Route path='/Customer/Pending' element={<Home></Home>}/>
                 <Route path='/' element={<HomePage></HomePage>}/>
-                <Route path='/Home/Success' element={<Home></Home>}/>
-                <Route path='/Home/Exclusive' element={<Home></Home>}/>
+                <Route path='/Customer/Success' element={<Home></Home>}/>
+                <Route path='/Customer/Exclusive' element={<Home></Home>}/>
+
                 <Route path='/SignUp' element={<Register></Register>}/>
 
                 <Route path='/VendorHome' element={<VendorHome/>}/>
                 <Route path='/VendorHome/AddProducts' element={<AddProduct/>}/>
 
-                <Route path='/Home/Cart' element={<Home></Home>}/>
+                <Route path='/Customer/Cart' element={<Home></Home>}/>
 
                 <Route/>
             </Routes>
