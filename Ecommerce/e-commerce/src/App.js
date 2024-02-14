@@ -26,13 +26,14 @@ function App() {
     <div>
         <Router>
             <Routes>
-                {/* <Route path='/' element={<L></L>}/> */}
+                <Route path='/Login' element={<L></L>}/>
                 {/* <Route path='/' element={<Home></Home>}/> */}
                 <Route path='/Customer/Product' element={<Home></Home>}/>
                 <Route path='/Customer/Pending' element={<Home></Home>}/>
                 <Route path='/' element={<HomePage></HomePage>}/>
                 <Route path='/Customer/Success' element={<Home></Home>}/>
                 <Route path='/Customer/Exclusive' element={<Home></Home>}/>
+
                 <Route path='/SignUp' element={<Register></Register>}/>
 
                 <Route path='/VendorHome' element={<VendorHome/>}/>

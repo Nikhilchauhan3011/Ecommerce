@@ -48,6 +48,7 @@ function SideBar(){
                         )}
                         {Trending && (
                             <div style={{ marginLeft: '10px', width: '100px', height: 'auto' }}>
+
                              <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
                                 - Mens
                             </Link>
@@ -65,14 +66,15 @@ function SideBar(){
                             </Link>
                             </div>
                         )}
+
                 </div>
-                <hr></hr>
+                <hr className="underline"></hr>
                 <div>
                     <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
                         Wishlist
                     </Link>
                 </div>
-                <hr></hr>
+                <hr className="underline"></hr>
                 <div>
                     <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
                         Special for your
@@ -84,7 +86,7 @@ function SideBar(){
                         Join Exclusive !
                     </Link>
                 </div>
-                <hr></hr>
+                <hr className="underline"></hr>
                 </div>
             </div>           
        </div>   
