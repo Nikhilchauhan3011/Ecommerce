@@ -12,8 +12,8 @@ function HomePage(){
         <div style={{display:'flex'}}>
         <SideBar />
         <div style={{width:'84vw'}}>
-        <Offers ></Offers>
-        <SimilarProducts></SimilarProducts>
+            <Offers></Offers>
+            <SimilarProducts></SimilarProducts>
         </div>
         </div>
         

@@ -26,30 +26,30 @@ function Home(){
             <NavBar></NavBar>
             <div style={{display:'flex'}}>
             <SideBar></SideBar>
-            {path === '/Home/Product' && (
+            {path === '/Customer/Product' && (
                 <div style={{width:'85vw'}}>
                     <Product></Product>
                     <SimilarProducts></SimilarProducts>
                     <CommentsAndReviews></CommentsAndReviews>
                 </div>
             )}
-            {path === '/Home/Pending' && (
+            {path === '/Customer/Pending' && (
                 <div>
                     <PendingOrders></PendingOrders>
                     <SimilarProducts></SimilarProducts>
             </div>
             )}
-            {path === 'Home/Profile' && (
+            {path === '/Customer/Profile' && (
                     // <div style={{width:'700px'}}>
                     //     <Profile></Profile>
                     // </div>
                     <Profile></Profile>
             )}
-            {path === '/Home/Success' &&(
+            {path === '/Customer/Success' &&(
                 <Success></Success>
             )}
 
-            {path === '/Home/Exclusive' && (
+            {path === '/Customer/Exclusive' && (
                     // <div style={{width:'700px'}}>
                     //     <Profile></Profile>
                     // </div>
@@ -60,7 +60,7 @@ function Home(){
             )}
 
             
-            {path === '/Home/Cart' &&(
+            {path === '/Customer/Cart' &&(
                 <Cart></Cart>
             )}
 
