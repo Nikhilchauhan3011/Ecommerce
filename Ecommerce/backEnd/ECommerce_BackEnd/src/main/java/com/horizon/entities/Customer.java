@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer {
+public class Customer extends BaseEntity {
   
 	private String firstName;
 	
@@ -33,6 +33,8 @@ public class Customer {
 	private Boolean isExclusive;
 	
 	private List<Orders> orders;
+	
+	private WishList list;
 	
 	
 }
