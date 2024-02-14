@@ -1,3 +1,9 @@
+body{
+    margin:0;
+    padding :0;
+    box-sizing: border-box;
+}
+
 .sidebar{
     
     width:15vw;
@@ -20,9 +26,13 @@
 h6{
     color: white;
 }
-hr{
+
+.underline{
     color: white;
-    width: 200px;
+    padding:0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 14vw;
 }
 
 a{

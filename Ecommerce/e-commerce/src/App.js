@@ -26,10 +26,10 @@ function App() {
     <div>
         <Router>
             <Routes>
-                <Route path='/' element={<L></L>}/>
+                <Route path='/Login' element={<L></L>}/>
                 <Route path='/Home/Product' element={<Home></Home>}/>
                 <Route path='/Home/Pending' element={<Home></Home>}/>
-                <Route path='/Home' element={<HomePage></HomePage>}/>
+                <Route path='/' element={<HomePage></HomePage>}/>
                 <Route path='/Home/Success' element={<Home></Home>}/>
                 <Route path='/Home/Exclusive' element={<Home></Home>}/>
                 <Route path='/SignUp' element={<Register></Register>}/>

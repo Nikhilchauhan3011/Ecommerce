@@ -62,25 +62,25 @@ function SideBar(){
         </div>
       )}
     </div>
-                <hr></hr>
+                <hr className="underline"></hr>
                 <div>
                     <a href="_______">
                         <h6>WishList</h6>
                     </a>
                 </div>
-                <hr></hr>
+                <hr className="underline"></hr>
                 <div>
                     <a href="_______">
                         <h6>Special for you</h6>
                     </a>                
                 </div>
-                <hr></hr>
+                <hr className="underline"></hr>
                 <div>
                     <a href="/Home/Exclusive">
                         <h6>Join Exclusive !</h6>
                     </a>
                 </div>
-                <hr></hr>
+                <hr className="underline"></hr>
                 </div>
             </div>           
        </div>   
