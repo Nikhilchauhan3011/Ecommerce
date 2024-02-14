@@ -54,7 +54,7 @@ function Cart(){
             } 
 
             <div className="cartTotal"> 
-            <h2> Items Total : 2344</h2>
+            <h2 style={{color:'black'}}> Items Total : 2344</h2>
             </div>
 
             </div>
