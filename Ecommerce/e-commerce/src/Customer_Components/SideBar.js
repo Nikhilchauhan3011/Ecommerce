@@ -8,6 +8,7 @@ import PendingOrders from "./PendingOrders";
 import Categories from "./Offers";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 function SideBar(){
         const [Trending ,SetTrending] = useState(false);
         const [backGroundColor, setBg]= useState(false);
@@ -47,38 +48,41 @@ function SideBar(){
                         )}
                         {Trending && (
                             <div style={{ marginLeft: '10px', width: '100px', height: 'auto' }}>
-                            <a href="">
-                                <h6>- Men</h6>
-                            </a>
-                            <a href="">
-                                <h6>- Women</h6>
-                            </a>
-                            <a href="">
-                                <h6>- Kids</h6>
-                            </a>
-                            <a href="">
-                                <h6>- Adult</h6>
-                            </a>
-        </div>
-      )}
-    </div>
-                <hr></hr>
-                <div>
-                    <a href="_______">
-                        <h6>WishList</h6>
-                    </a>
+                             <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
+                                - Mens
+                            </Link>
+                            <br></br>
+                            <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
+                                - Women
+                            </Link>
+                            <br></br>
+                            <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
+                                - Kids
+                            </Link>
+                            <br></br>
+                            <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
+                                - Adults
+                            </Link>
+                            </div>
+                        )}
                 </div>
                 <hr></hr>
                 <div>
-                    <a href="_______">
-                        <h6>Special for you</h6>
-                    </a>                
+                    <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
+                        Wishlist
+                    </Link>
                 </div>
                 <hr></hr>
                 <div>
-                    <a href="/Home/Exclusive">
-                        <h6>Join Exclusive !</h6>
-                    </a>
+                    <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
+                        Special for your
+                    </Link>               
+                </div>
+                <hr></hr>
+                <div>
+                    <Link to ='/Customer/Exclusive' style={{textDecoration:'none'}}>
+                        Join Exclusive !
+                    </Link>
                 </div>
                 <hr></hr>
                 </div>

@@ -9,10 +9,12 @@
     overscroll-behavior-inline: contain;
 }
 
-
+h2{
+    color: black;
+}
 
 .cartContainer{
-    margin: 5px;
+    margin: 2rem;
     border-radius: 10px;
     background-color:#d7d9db;
     height: fit-content;
@@ -22,7 +24,7 @@
 
 .cartImage{
     align-self: center;
-    width: 350px;
+    width: 18vw;
     height: auto;
     border-radius: 10px;
 }
