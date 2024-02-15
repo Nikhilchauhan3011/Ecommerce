@@ -20,7 +20,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-public class ProductQyantity extends BaseEntity{
+public class ProductQuantity extends BaseEntity{
 	@OneToOne
 	private Product product;
 	private LocalDateTime purchaseTime;

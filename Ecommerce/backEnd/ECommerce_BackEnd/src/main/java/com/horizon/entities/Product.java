@@ -34,6 +34,6 @@ public class Product {
 	private boolean isAvailable;
 	
 	@OneToOne
-	private ProductQyantity productQyantity;
+	private ProductQuantity productQuantity;
 	
 }

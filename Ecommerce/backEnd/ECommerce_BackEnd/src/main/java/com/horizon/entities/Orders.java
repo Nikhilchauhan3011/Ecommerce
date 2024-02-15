@@ -15,5 +15,5 @@ import lombok.ToString;
 @AllArgsConstructor
 @Entity
 public class Orders extends BaseEntity{
-	private List<ProductQyantity> productQyantity;
+	private List<ProductQuantity> productQyantity;
 }
