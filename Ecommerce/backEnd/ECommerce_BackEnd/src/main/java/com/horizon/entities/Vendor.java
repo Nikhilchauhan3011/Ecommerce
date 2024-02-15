@@ -1,6 +1,7 @@
 package com.horizon.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -22,5 +23,6 @@ public class Vendor {
 	private String gstNo;
 	private String shopName;
 	
-	
-}
+	@OneToOne
+	private VendorAddress vendorAddress;
+}	
