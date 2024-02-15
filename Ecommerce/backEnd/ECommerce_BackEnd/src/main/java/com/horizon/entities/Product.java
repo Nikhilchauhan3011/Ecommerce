@@ -15,7 +15,7 @@ import lombok.extern.jbosslog.JBossLog;
 @AllArgsConstructor
 @ToString
 @Entity
-public class Product {
+public class Product extends BaseEntity{
 	private String productName;
 	private int rating;
 	private String description;

@@ -1,7 +1,5 @@
 package com.horizon.entities;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 
 import lombok.AllArgsConstructor;
@@ -16,9 +14,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class WishList {
-
-	private Customer customer;
+public class Reviews {
 	
-	private List<Product> product;
+	private String review;
+	
+	private Product product;
+
 }
