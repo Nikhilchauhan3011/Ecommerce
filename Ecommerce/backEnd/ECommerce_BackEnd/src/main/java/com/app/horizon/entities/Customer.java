@@ -1,7 +1,10 @@
-package com.horizon.entities;
+package com.app.horizon.entities;
+
+
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -32,18 +35,19 @@ public class Customer extends BaseEntity {
 	
 	private String mobile;
 	
-	@OneToOne
-	private Cart cart;
+	@OneToMany(mappedBy = "customer",cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<CartProductQuantity> cart;
+	
+	@OneToMany(mappedBy = "customer",cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<OrderProductQuantity> order;
 	
 	private Boolean isExclusive;
 	
-	private byte[] image;
+	private byte[] customerImage;
 	
-	@OneToMany
-	private List<Orders> orders;
 	
-	@OneToOne
-	private WishList list;
+	@OneToOne(mappedBy = "customer",cascade = CascadeType.ALL, orphanRemoval = true)
+	private WishList wishlist;
 	
 	@OneToOne
 	private CustomerAddress address;

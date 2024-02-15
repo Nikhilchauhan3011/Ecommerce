@@ -1,4 +1,4 @@
-package com.horizon.entities;
+package com.app.horizon.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;

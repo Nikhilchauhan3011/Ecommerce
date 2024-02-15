@@ -1,4 +1,4 @@
-package com.horizon.entities;
+package com.app.horizon.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
@@ -14,13 +14,17 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class VendorAddress extends BaseEntity{
+	
 	private int pincode;
+	
 	private String city;
+	
 	private String state;
+	
 	private String fullAddress;
 	
 	@OneToOne
-	Vendor vendor;
+	private Vendor vendor;
 	
 	
 }

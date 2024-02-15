@@ -1,32 +1,35 @@
-package com.horizon.entities;
+package com.app.horizon.entities;
 
-import java.time.LocalDateTime;
+
 
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 
-
-
-//challenge one
-@Getter
 @Setter
-@AllArgsConstructor
+@Getter
 @ToString
+@AllArgsConstructor
 @Entity
-public class ProductQuantity extends BaseEntity{
+@NoArgsConstructor
+public class CartProductQuantity extends BaseEntity{
+	
 	@OneToOne
 	private Product product;
-	private LocalDateTime purchaseTime;
-	@OneToMany
+	
+	private Double price;
+
+	@ManyToOne
 	private Customer customer;
 	private int quantity;
-	
-	
+
+
 }
