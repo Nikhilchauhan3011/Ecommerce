@@ -18,12 +18,10 @@ import lombok.ToString;
 @Entity
 public class Orders extends BaseEntity{
 	
-	@OneToMany
-	private List<ProductQyantity> productQyantity;
-	
 	private LocalDateTime orderDate ;
 	
 	private LocalDateTime deliverDate;
 	
-	
+	@OneToMany
+	private List<ProductQuantity> productQuantity;
 }

@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.extern.jbosslog.JBossLog;
+
 
 @Getter
 @Setter
@@ -34,6 +34,6 @@ public class Product extends BaseEntity{
 	private boolean isAvailable;
 	
 	@OneToOne
-	private ProductQyantity productQyantity;
+	private ProductQuantity productQuantity;
 	
 }
