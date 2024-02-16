@@ -2,10 +2,12 @@ package com.app.horizon.entities;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -36,10 +38,10 @@ public class Customer extends BaseEntity {
 	private String mobile;
 	
 	@OneToMany(mappedBy = "customer",cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<CartProductQuantity> cart;
+	private List<CartProductQuantity> cart = new ArrayList<CartProductQuantity>();
 	
 	@OneToMany(mappedBy = "customer",cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<OrderProductQuantity> order;
+	private List<OrderProductQuantity> order = new ArrayList<OrderProductQuantity>();
 	
 	private Boolean isExclusive;
 	
@@ -49,8 +51,8 @@ public class Customer extends BaseEntity {
 	@OneToOne(mappedBy = "customer",cascade = CascadeType.ALL, orphanRemoval = true)
 	private WishList wishlist;
 	
-	@OneToOne
-	private CustomerAddress address;
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<CustomerAddress> address = new ArrayList<CustomerAddress>();
 	
 	
 }
