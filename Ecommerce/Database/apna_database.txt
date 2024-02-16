@@ -1,0 +1,13 @@
+show tables;
+
+desc customer;
+desc customer_address;
+desc cart_product_quantity;
+desc order_product_quantity;
+
+
+insert into customer(coins,email,first_name,is_exclusive, last_name, mobile, password) values(5,"aditya.misal02@gmail.com", "Aditya", true, "Misal", "8828364372", "Aditya@23"); 
+insert into cart_product_quantity(price, quantity, customer_id, product_id) values(null,0,1,null);
+insert into customer_address(city, full_address, pincode, state, customer_id) values ("Mumbai", "204, sai smita chs", "421201", "Maharashtra",1);
+
+drop database ecommercemain;
