@@ -7,6 +7,9 @@ import javax.persistence.ManyToOne;
 
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +31,7 @@ public class CartProductQuantity extends BaseEntity{
 	private Double price;
 
 	@ManyToOne
+	@JsonProperty(access=Access.WRITE_ONLY)
 	private Customer customer;
 	private int quantity;
 

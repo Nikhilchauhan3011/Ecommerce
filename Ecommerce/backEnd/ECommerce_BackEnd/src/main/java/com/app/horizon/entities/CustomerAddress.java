@@ -6,6 +6,9 @@ import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.ManyToAny;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,5 +31,6 @@ public class CustomerAddress extends BaseEntity{
 	private String fullAddress;
  
 	@ManyToOne
+	@JsonProperty(access=Access.WRITE_ONLY)
 	private Customer customer;
 }

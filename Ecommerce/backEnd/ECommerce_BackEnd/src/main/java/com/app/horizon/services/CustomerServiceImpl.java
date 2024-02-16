@@ -20,9 +20,9 @@ public class CustomerServiceImpl implements CustomerService{
 	public Customer getLoginDetails(CustomerDto cDto){
 		Customer customer = cRepo.getByEmail(cDto.getEmail());
 //		System.out.print(customer);
-		customer.getCart();
-		customer.getOrder();
-		customer.getAddress();
+//		customer.getCart();
+//		customer.getOrder();
+//		customer.getAddress();
 		return customer;
 	}
 
