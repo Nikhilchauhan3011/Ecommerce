@@ -1,7 +1,10 @@
 package com.app.horizon.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.ManyToAny;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,6 +27,6 @@ public class CustomerAddress extends BaseEntity{
 	
 	private String fullAddress;
  
-	@OneToOne
+	@ManyToOne
 	private Customer customer;
 }
