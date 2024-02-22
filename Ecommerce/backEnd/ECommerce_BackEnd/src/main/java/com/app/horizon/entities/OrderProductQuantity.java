@@ -42,7 +42,6 @@ public class OrderProductQuantity extends BaseEntity{
 	private Double price;
 
 	@ManyToOne
-	@JsonProperty(access=Access.WRITE_ONLY)
 	private Customer customer;
 	private int quantity;
 

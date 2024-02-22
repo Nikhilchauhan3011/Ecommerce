@@ -21,6 +21,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
+
 public class Category extends BaseEntity{
 	
 	private String categoryName;

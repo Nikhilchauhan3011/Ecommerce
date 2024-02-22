@@ -60,8 +60,8 @@ public class Customer extends BaseEntity {
 	@OneToOne(mappedBy = "customer",cascade = CascadeType.ALL, orphanRemoval = true)
 	private WishList wishlist;
 	
-	
-	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<CustomerAddress> address = new ArrayList<CustomerAddress>();
 	
 	
