@@ -10,6 +10,7 @@ import Register from './Customer_Components/Register';
 import L from './Customer_Components/Login';
 import Home from './Customer_Components/Home';
 import Cart from './Customer_Components/Cart';
+import { VendorHome2 } from './VendorComponents/VendorHome2';
 
 
 
@@ -38,6 +39,7 @@ function App() {
 
                 <Route path='/VendorHome' element={<VendorHome/>}/>
                 <Route path='/VendorHome/AddProducts' element={<AddProduct/>}/>
+                <Route path='/VendorHome2' element={<VendorHome2/>}/>
 
                 <Route path='/Customer/Cart' element={<Home></Home>}/>
 

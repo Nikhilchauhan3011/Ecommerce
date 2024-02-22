@@ -23,6 +23,7 @@ public class Reviews extends BaseEntity{
 	private String review;
 	
 	@ManyToOne
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private Product product;
 
 }

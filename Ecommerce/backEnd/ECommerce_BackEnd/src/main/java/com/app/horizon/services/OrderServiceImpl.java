@@ -13,7 +13,7 @@ import com.app.horizon.dtos.OrderDto;
 import com.app.horizon.entities.Customer;
 import com.app.horizon.entities.OrderProductQuantity;
 import com.app.horizon.entities.Product;
-import com.app.horizon.repos.CustomerReposiratory;
+import com.app.horizon.repos.CustomerRepository;
 import com.app.horizon.repos.OrderRepository;
 import com.app.horizon.repos.ProductRepository;
 
@@ -27,7 +27,7 @@ public class OrderServiceImpl implements OrderService {
 	OrderRepository orderDao;
 	
 	@Autowired
-	CustomerReposiratory customerDao;
+	CustomerRepository customerDao;
 	
 	@Autowired
 	ProductRepository prodDao;

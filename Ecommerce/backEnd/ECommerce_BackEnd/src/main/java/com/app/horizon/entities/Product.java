@@ -1,19 +1,22 @@
 package com.app.horizon.entities;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+
 
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
+
 import org.springframework.web.multipart.MultipartFile;
+
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
@@ -44,7 +47,9 @@ public class Product extends BaseEntity{
 
 	
 	@OneToMany(mappedBy = "product",cascade = CascadeType.ALL, orphanRemoval = true)
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<ProductImage> images = new ArrayList<>();
+
 	
 	private int stock;
 	
@@ -55,9 +60,12 @@ public class Product extends BaseEntity{
 	private int price;
 	
 	@OneToMany(mappedBy = "product",cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Reviews> reviews = new ArrayList<>();
+	@LazyCollection(LazyCollectionOption.FALSE)
+	private List<Reviews> reviews = new ArrayList<Reviews>();
+
 	
 	@ManyToOne
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private SubCategory subCategory;
 	
 	private boolean isAvailable;
