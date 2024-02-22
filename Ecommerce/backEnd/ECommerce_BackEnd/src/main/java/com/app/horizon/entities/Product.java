@@ -1,12 +1,22 @@
 package com.app.horizon.entities;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,8 +42,9 @@ public class Product extends BaseEntity{
 	private Long numberOfPeopleRated;
 	
 
+	
 	@OneToMany(mappedBy = "product",cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<ProductImage> images;
+	private List<ProductImage> images = new ArrayList<>();
 	
 	private int stock;
 	
@@ -44,7 +55,7 @@ public class Product extends BaseEntity{
 	private int price;
 	
 	@OneToMany(mappedBy = "product",cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<Reviews> reviews;
+	private List<Reviews> reviews = new ArrayList<>();
 	
 	@ManyToOne
 	private SubCategory subCategory;
@@ -52,6 +63,22 @@ public class Product extends BaseEntity{
 	private boolean isAvailable;
 	
 	private String productType;
+	
+	
+	public void setImages(MultipartFile[] image) {
+		
+		for(MultipartFile arr : image) {
+			ProductImage tempImg = new ProductImage();
+			try {
+				tempImg.setImage(arr.getBytes());
+				tempImg.setProduct(this);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			images.add(tempImg);
+		
+	}
+}
 	
 	
 }

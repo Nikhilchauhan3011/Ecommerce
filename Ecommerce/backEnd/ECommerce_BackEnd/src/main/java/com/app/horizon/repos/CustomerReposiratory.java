@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.app.horizon.entities.Customer;
 
 @Repository
-public interface CustomerReposiratory extends JpaRepository<Customer, Integer>{
+public interface CustomerReposiratory extends JpaRepository<Customer, Long>{
 
 	Customer getByEmail(String email);
 	

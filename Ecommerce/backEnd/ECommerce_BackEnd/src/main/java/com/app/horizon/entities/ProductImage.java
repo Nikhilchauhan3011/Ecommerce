@@ -5,6 +5,9 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,10 +23,9 @@ import lombok.ToString;
 public class ProductImage extends BaseEntity{
 
 	@Lob
-	private Byte[] image;
+	private byte[] image;
 	
 	@ManyToOne
-	@MapsId("id")
 	private Product product;
 	
 	

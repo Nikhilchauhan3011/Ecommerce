@@ -5,6 +5,7 @@ import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -13,6 +14,7 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
+@NoArgsConstructor
 public class VendorAddress extends BaseEntity{
 	
 	private int pincode;

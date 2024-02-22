@@ -14,6 +14,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @Entity
+@NoArgsConstructor
 public class Vendor extends BaseEntity{
 	
 	private String firstName;
