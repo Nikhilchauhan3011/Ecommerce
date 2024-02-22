@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <noscript>
+      <a href="https://accounts.shopify.com/oauth/authorize?client_id=7ee65a63608843c577db8b23c4d7316ea0a01bd2f7594f8a9c06ea668c1b775c&amp;destination_uuid=d5e1f636-0140-4fb0-bdbd-baddcfbb2f48&amp;nonce=eaf99203c94436a632d479496e27fb81&amp;prompt=merge&amp;redirect_uri=https%3A%2F%2Ftestingbianca.myshopify.com%2Fadmin%2Fauth%2Fidentity%2Fcallback&amp;response_type=code&amp;scope=email%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fdestinations.readonly%20openid%20profile%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fpartners.collaborator-relationships.readonly%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fbanking.manage%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fmerchant-setup-dashboard.graphql%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fshopify-chat.admin.graphql%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fflow.workflows.manage%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Forganization-identity.manage%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fmerchant-bank-account.manage&amp;state=eee9da828a3766114080d8538bcfd1ad&amp;ui_locales=en&amp;ux=shop">Continue</a>
+    </noscript>
+
+    <script type="text/javascript" defer>
+      window.location = "https:\/\/accounts.shopify.com\/oauth\/authorize?client_id=7ee65a63608843c577db8b23c4d7316ea0a01bd2f7594f8a9c06ea668c1b775c\u0026destination_uuid=d5e1f636-0140-4fb0-bdbd-baddcfbb2f48\u0026nonce=eaf99203c94436a632d479496e27fb81\u0026prompt=merge\u0026redirect_uri=https%3A%2F%2Ftestingbianca.myshopify.com%2Fadmin%2Fauth%2Fidentity%2Fcallback\u0026response_type=code\u0026scope=email%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fdestinations.readonly%20openid%20profile%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fpartners.collaborator-relationships.readonly%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fbanking.manage%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fmerchant-setup-dashboard.graphql%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fshopify-chat.admin.graphql%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fflow.workflows.manage%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Forganization-identity.manage%20https%3A%2F%2Fapi.shopify.com%2Fauth%2Fmerchant-bank-account.manage\u0026state=eee9da828a3766114080d8538bcfd1ad\u0026ui_locales=en\u0026ux=shop";
+    </script>
+  </body>
+</html>

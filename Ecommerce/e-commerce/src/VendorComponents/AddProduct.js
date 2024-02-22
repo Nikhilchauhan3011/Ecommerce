@@ -2,7 +2,9 @@ import VendorNavBar from './VendorNavBar'
 import { VendorSidebar } from './vendorSidebar'
 import Footer from '../Customer_Components/Footer.js'
 import '../VendorComponentCss/AddProduct.css'
-import React,{ useState } from 'react'
+import React,{ useEffect, useState } from 'react'
+import axios from 'axios'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 
 export const AddProduct=()=>{
@@ -11,6 +13,50 @@ export const AddProduct=()=>{
     const [pricePerProduct,setPricePerProduct] = useState("0");
     const totalPrice = Number(quantity)*Number(pricePerProduct);
     const [imageFiles, setImageFiles] = useState([]);
+    const [productName, setProductName] = useState("");
+    const [productBrand, setProductBrand] = useState("");
+    const [categoryId , setCategoryId] = useState(0);
+    const [category , setCategory] = useState([]);
+    const [subcategory, setSubcategory] = useState([]);
+    const location = useLocation();
+    const receivedData = location.state;
+    const [subcategoryId , setSubcategoryId] = useState(0);
+    const [description , setDescription] = useState("");
+    const [date , setDate] = useState("");
+    const navigate = useNavigate();
+
+
+    // const []
+
+
+    useEffect(() => {
+        const getCategories = async () => {
+          try {
+            console.log("hello......");
+            const response = await axios.get("http://localhost:7070/Category/AllCategories");
+            setCategory(response.data);
+            // console.log(response.data);
+            // Instead of setting categoryId immediately, use it directly in getSubCategories
+          } catch (error) {
+            throw new Error(error);
+          }
+        }
+      
+        getCategories();
+      }, []);
+      
+      const getSubCategories = async (categoryId) => { 
+        try {
+          console.log("inside method :"+ categoryId);
+          const response = await axios.get("http://localhost:7070/SubCategory/GetOneCategory", {
+            params: { "categoryId": categoryId }
+          });
+          setSubcategory(response.data);
+        } catch (error) {
+          throw new Error(error);
+        }
+      }
+
 
     const handleFileChange = (e) => {
         const files = Array.from(e.target.files);
@@ -22,21 +68,41 @@ export const AddProduct=()=>{
         console.log('Selected Images:', imageFiles);
       };
 
-      const handleCategory=(e)=>{
-        setSelectedCategory(e.target.value);
-      }
+    
 
-      const CategoriesList = [
-        {id:1,name:"Clothes",value:"clothes"},
-        {id:2,name:"Shoes",value:"shoes"},
-        {id:3,name:"Electronics",value:"electronics"},
-        {id:4,name:"Toys",value:"toys"},
-        {id:5,name:"Beauty Accessories",value:"beauty_accessories"}
-      ]
+    const handleOnSubmit  = async() => {
+        const currenrDate = new Date();
+        setDate(currenrDate.toISOString());
+        const data = {
+                        "productName" : productName,
+                        "ProductBrand" : productBrand,
+                        "Category" : categoryId,
+                        "Subcategory" : subcategoryId,
+                        "price" : pricePerProduct,
+                        "description" : description,
+                        "dateOfAdding" : date
+                    }
+
+
+        try{
+            const response = await axios.post("http://localhost:7070/VendorProduct/AddProduct",data);
+            navigate("/VendorHome2", {state : {id : response.data.id, name : response.data.name}});   
+        }
+        catch(err){
+            console.log(err);
+            throw new Error(err);
+        }
+    
+    }
+
+      
+
+
+
 
     return (
         <div className="fullContainer">
-            <VendorNavBar/>
+            <VendorNavBar name={receivedData.name}/>
             <div style={{display:'flex'}}>
             <div className="addProduct">
                 <form className='media-form' onSubmit={handleSubmit}>
@@ -45,12 +111,12 @@ export const AddProduct=()=>{
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label for="productName">Product Name</label>
-                            <input type="text" className="form-control" id="productName" placeholder="Jeans" />
+                            <input type="text" className="form-control" id="productName" placeholder="Jeans" onChange={(e)=>{setProductName(e.target.value)}}/>
                         </div>
 
                         <div className="form-group col-md-6">
                             <label for="brandName">Brand Name</label>
-                            <input type="text" className="form-control" id="brandName" placeholder="flying machine" />
+                            <input type="text" className="form-control" id="brandName" placeholder="flying machine" onChange={(e)=>{setProductBrand(e.target.value)}}/>
                         </div>
 
                         </div>
@@ -58,9 +124,23 @@ export const AddProduct=()=>{
                         <div className='form-row'>
                         <div className="form-group col-md-4">
                             <label for="brandName">Category</label>
-                            <select value={selectedCategory} onChange={handleCategory}>
-                                <option value="">--Select--</option>
-                                {CategoriesList.map(category=><option key={category.id} value={category.value}>{category.name}</option>)}
+                            <select onChange={(e) => { getSubCategories(e.target.value); setCategoryId(e.target.value)}}>
+                                <option value="0">--Select--</option>
+                                {category.map(cat => (
+                                    <option key={cat.id} value={cat.id}>
+                                    {cat.categoryName}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        </div>
+
+                        <div className='form-row'>
+                        <div className="form-group col-md-4">
+                            <label for="brandName">Sub-Category</label>
+                            <select onChange={(e)=>{setSubcategoryId(e.target.value)}}>
+                                <option value="1">--Select--</option>
+                                {subcategory.map(cat=><option key={cat.id} value={cat.id}>{cat.subCategoryName}</option>)}
                             </select>
                         </div>
                         </div>
@@ -85,7 +165,7 @@ export const AddProduct=()=>{
 
                         </div>
                     <label for='description'>Description</label>
-                    <textarea type='text' id='description' placeholder='full description of product'/>
+                    <textarea type='text' id='description' placeholder='full description of product' onChange={(e)=>{setDescription(e.target.value)}}/>
                         <br></br>
 
                     <div className='form-row'>
@@ -113,7 +193,7 @@ export const AddProduct=()=>{
                     </div>
                     <div className='form-row'>
                         <div className='form-group col-md-2'>
-                            <button type='submit' className='btn btn-success' >Add product </button>
+                            <button type='submit' className='btn btn-success' onClick={handleOnSubmit} >Add product </button>
                         </div>
                     </div>
                 </form>

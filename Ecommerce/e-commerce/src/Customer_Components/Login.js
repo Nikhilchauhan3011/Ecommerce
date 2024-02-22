@@ -18,6 +18,7 @@ function L(props){
     const [path,setPath] =  useState(location.state?.paths || '/');
 
 
+
     useEffect(() =>{
         function print(){
             console.log("Aditya " + path +" s");
@@ -39,28 +40,57 @@ function L(props){
         // Reset error on successful login
         setError('');
         console.log(loginAs);
-        if(loginAs=='customer'){
-            navigate(path);
-        }
         
+        if(loginAs === "customer"){
+            customerLogin();
+        }
+        else{
+            vendorLogin();
+        }
 
     };
 
-    const [imgUrl, setImgUrl] = useState('https://random.imagecdn.app/550/550');
 
-    // useEffect( () => {
-    //         const fetchImage = async () =>{
-    //             try{
-    //                 const response = await axios.get('https://api.api-ninjas.com/v1/randomimage?category=nature');  
-    //                 const data = response.data; 
+    async function vendorLogin(){
+        const email ={
+            "email" : username,
+            "password" : password
+        };
+        const response = await axios.get("http://localhost:7070/Vendor/Login", {
+            params: email
+          });
+          console.log(response.data.id);
+          if(response.data.status == true){
+            navigate("/VendorHome2", {state : {id : response.data.id, name : response.data.name}});
+          }
+          else{
+            setError('wrong Email or Password');
+          }
+        
+    }
 
-    //                 set
-    //             }
-    //             catch(error){
-    //                 console.log(error);
-    //             }
-    //         }
-    // },[]);
+
+
+
+    async function customerLogin(){
+        const email ={
+            "email" : username,
+            "password" : password
+        };
+        const response = await axios.get("http://localhost:7070/Customer/Login", {
+            params: email
+          });
+
+          if(response.data == true){
+            if(loginAs=='customer'){
+                navigate(path);
+            }
+          }
+          else{
+            setError('wrong Email or Password');
+          }
+        
+    }
 
     return(
         <div className="full-container">
@@ -115,7 +145,7 @@ function L(props){
                     Login
                     </button>
                     <p className="sign-up-link">
-                    Don't have an account? <a href="/signup">Sign Up</a>
+                    Don't have an account? <a href="/SignUp">Sign Up</a>
                     </p>
                     <div style={{marginTop:'80px',display:'flex'}}>
                         <img src={facebook} style={{width:'25px', height:'25px', marginLeft:'250px'}}></img>

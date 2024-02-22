@@ -17,4 +17,10 @@ import lombok.ToString;
 public class CustomerDto {
 	String email;
 	String password;
+	String firstName;
+	String lastName;
+	String mobileNumber;
+	AddressDto homeAddress;
+	
+	
 }
